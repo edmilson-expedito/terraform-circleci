@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "dynamodb-homolog" {
-  provider = aws.us-east-2
+  provider       = aws.us-east-2
   name           = "GameScores"
   billing_mode   = "PAY_PER_REQUEST"
   read_capacity  = 0

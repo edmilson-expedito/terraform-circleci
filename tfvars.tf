@@ -8,7 +8,7 @@ variable "amis" {
 }
 
 variable "cidr_access" {
-  type = list
+  type = list(any)
 
   default = ["177.131.133.120/32"]
 }

@@ -3,10 +3,10 @@ resource "aws_security_group" "acesso-ssh" {
   description = "Configura o acesso SSH"
 
   ingress {
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = var.cidr_access
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = var.cidr_access
   }
 
   tags = {
@@ -15,15 +15,15 @@ resource "aws_security_group" "acesso-ssh" {
 }
 
 resource "aws_security_group" "acesso-ssh-us-east-2" {
-  provider = aws.us-east-2
+  provider    = aws.us-east-2
   name        = "acesso-ssh-us-east-2"
   description = "Configura o acesso SSH"
 
   ingress {
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = "${var.cidr_access}"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = var.cidr_access
   }
 
   tags = {
