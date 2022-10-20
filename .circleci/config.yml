@@ -4,14 +4,14 @@ orbs:
 workflows:
   deploy_infrastructure:
     jobs:
-      # - terraform/fmt:
-      #     checkout: true
-      #     context: terraform
+      - terraform/fmt:
+          checkout: true
+          context: terraform
       - terraform/validate:
           checkout: true
           context: terraform
-          # requires:
-          #   - terraform/fmt
+          requires:
+            - terraform/fmt
       - terraform/plan:
           checkout: true
           context: terraform
